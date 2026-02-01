@@ -1,0 +1,14 @@
+{%  extends "base.html" %}
+
+
+{% block content %}
+{% load static %}
+<section id="member_detailsadd" class="member_detailsadd">
+    <form action="" method="POST" class="mdform-add">
+        {% csrf_token %} 
+        {{members_detailsadd_form}}    
+        <input type="submit" value="Add Current Member" class="common-submitbtn">
+    </form>  
+</section>
+
+{% endblock %}

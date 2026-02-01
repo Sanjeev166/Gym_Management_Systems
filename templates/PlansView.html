@@ -1,0 +1,43 @@
+{%  extends "base.html" %}
+
+
+{% block content %}
+{% load static %}
+<section id="plansview" class="plansview">
+    <p class="common-p"> Plans </p>
+    {% if request.user.role == 1 %}
+    <div class="commonview-btn">
+        <a href="/plans/add/"> <button> Add Plans </button> </a>
+    </div> 
+    {%endif%}   
+    <div class="plansview_tablecontainer">
+        <table class="plansview-table">
+            <tr>
+                <th> Duration months </th>
+                <th> Price ₹ </th>
+                <th> Session hr/day </th>
+                {% if request.user.role == 1 %}
+                <th> Delete </th>
+                <th> Update </th>
+                {%endif%}
+            </tr>    
+            {% for p_view in all_plans  %}
+            <tr>
+               <td data-label="Duration"> {{p_view.Duration_months}} </td>
+               <td data-label="Price"> {{p_view.Price}} </td>
+               <td data-label="Session" > {{p_view.Session_hrperday}} </td>
+               {% if request.user.role == 1 %}
+               <td data-label="Delete" > <a href="{% url "plan_del" p_view.id %}">
+                 <button class="commonview-delbtn"> Delete </button> </a>
+               </td>
+               <td data-label="Update" > <a href="{% url "plan_upd" p_view.id %}">
+                 <button class="commonview-updbtn"> Update </button> </a> 
+               </td>
+               {%endif%}
+            </tr> 
+            {% endfor %}
+        </table>
+    </div>           
+</section>    
+
+{% endblock %}

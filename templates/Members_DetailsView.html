@@ -1,0 +1,40 @@
+{%  extends "base.html" %}
+
+
+{% block content %}
+{% load static %}
+<section  class="membersdetailsview"> 
+    <p class="common-p"> Current Members </p> 
+    {% if request.user.role == 1 %} 
+    <div class="commonview-btn">
+        <a href="/membersdetails/add/"> <button> Add To Current Members </button> </a>
+    </div>
+    {%endif%}
+    <div class="membersdetailsview_tablecontainer">    
+        <table class="membersdetailsview_table">
+            <tr>
+                <th> Members </th>
+                <th> Mobile </th>
+                <th> Joindate </th>
+                <th> Duration months </th>
+                <th> Amount </th>
+            </tr>    
+            {% for md_view,md_view2 in members_detailsview_form %}
+            <tr>
+               <td data-label="name"> {{md_view2.user}} </td>
+               <td data-label="mobile"> {{md_view2.Mobile}} </td>
+               <td data-label="mobile"> {{md_view.start_date}} </td>
+               <td data-label="mobile"> {{md_view2.Plan}} </td>
+               <td data-label="mobile"> {{md_view2.Amount}} </td>
+            </tr> 
+            {% endfor %}
+        </table>
+    </div> 
+    {% if request.user.role == 2 %}
+    <div class="commonview-btn" id="updcrinfobtn">
+        <a href="/members/"> <button> Update Current Information </button> </a> 
+    </div>  
+    {%endif%}              
+</section>    
+
+{% endblock %}

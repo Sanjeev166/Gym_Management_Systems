@@ -1,0 +1,29 @@
+{%  extends "base.html" %}
+
+
+{% block content %}
+{% load static %}
+<section id="home" class="home">
+    <p> Build Stronger </p>
+    <div class="button"> 
+        <button><a href="/plans"> our plans </a></button>
+    </div>     
+</section>
+
+<h6> We Offer </h6>
+<section id="home-icons" class="home-icons"> 
+    <div id="workoutplan" class="workout-plan">
+        <h5> <i class="fa-solid fa-person-running"></i> Workout plan </h5>
+        <p> A plan that fits your schedule, goals, equipments
+    </div>
+    <div id="workoutplan" class="meal-plan">
+        <h5><i class="fa-solid fa-utensils"></i>  Meal plan </h5>
+        <p> Suitable approach of nutrition options to satisfy your fitness goals 
+    </div>
+    <div id="workoutplan" class="equipments">
+        <h5><i class="fa-solid fa-dumbbell"></i> Equipments </h5>
+        <p> Workout with top class equipments includes cardio machines, free weights, 
+            functional equipments, strength training equipments
+    </div>    
+</section>    
+{% endblock %}

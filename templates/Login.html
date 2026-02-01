@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> S fitness </title>
+    <link rel="stylesheet" href="{% static 'css/A.css' %}">
+</head>    
+<body>
+    <section class="login">
+        <div class="loginform-container">
+            <h2> Login </h2>
+            <form action="" method="POST" class="loginform">
+                {%csrf_token%}
+                <div class="logininput"> 
+                    <label for="username"> Username </label>
+                    <input type="text" name="usrnme" placeholder="Enter Username" > <br>
+                </div>
+                <div class="logininput">   
+                    <label for="password"> Password </label>
+                    <input type="password" name="psswrd" placeholder="Enter Your Password">
+                </div>    
+                <p  id="errmssg"> {{errormessage}} </p>
+                <button type="submit" class="loginbtn"> Submit </button>
+                <div id="nmepsswrd">
+                    <p>[name/password] <br>
+                        member/membermember  <br>
+                        admin/adminadmin <br> </p>
+                    </div>       
+            </form> 
+        </div>       
+    </section>
+</body>    
+</html>

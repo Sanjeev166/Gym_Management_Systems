@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> S fitness </title>
+    <link rel="stylesheet" href="{% static 'css/A.css' %}">
+</head>    
+<body>
+    <section class="signup">
+        <div class="signupform-container">
+            <h2> Signup </h2>
+            <form action="" method="POST" class="signupform">
+                {%csrf_token%}
+                <div class="signupinput"> 
+                    <label for="username"> Username </label>
+                    <input type="text" name="usrnme" placeholder="Enter Username" required> 
+                </div>
+                <div class="signupinput"> 
+                    <label for="email"> Email </label>
+                    <input type="email" name="eml" placeholder="Enter email" required>
+                </div>
+                <div class="signupinput">   
+                    <label for="password"> Password </label>
+                    <input type="password" name="psswrd" placeholder="Enter Your Password" required> 
+                </div>
+                <div class="signupinput">   
+                    <label for="role">User Role 
+                        <select name="rle">
+                            <option for='1' value='1'> Admin </option>
+                            <option for='2' value='2'> Member </option>
+                        </select>    
+                    </label>
+                </div>     
+                <p> {{err}} </p>
+                <button type="submit" class="signupbtn"> Submit </button>
+                <div id="a_login">
+                    <p>already a member?<a href="/" > <b>Login <b> </a></p>
+                </div>    
+            </form> 
+        </div>       
+    </section>
+
+</body>
+</html>    

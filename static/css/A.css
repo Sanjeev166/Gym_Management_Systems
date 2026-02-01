@@ -1,0 +1,566 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Roboto', sans-serif;   
+}
+
+body{
+    line-height: 1.6;
+    background: transparent;
+}
+
+ 
+section{
+    padding: 18px 8%;
+}
+
+/*Navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between ;
+    padding: 10px 6%;
+    align-items: center;
+    background: antiquewhite;;
+}
+
+.logo{
+    font-weight: 800;
+    color:brown;
+}
+
+.navbar nav a{
+    text-decoration: none;
+    margin-left: 15px;
+    color: rgb(251, 70, 49);
+    transition: 0.2s ease;
+}
+
+.navbar nav a:hover{
+    border-bottom: 3px solid coral;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/*Home*/
+.home {
+    background-image: url('../assets/images/gym-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home p{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: red;
+}
+
+button{
+    padding: 15px;
+    width: 150px;
+    background: coral;
+    border: 4px solid coral;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 550;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+button:hover{
+    background: transparent;
+    border: 4px solid coral;
+}
+
+button a{
+    text-decoration: none;
+    color: antiquewhite;    
+}
+
+button a:hover{
+    color: antiquewhite
+}
+
+h6{
+    text-align: center;
+    font-size: 35px;
+    padding: 20px;
+    
+}
+
+.home-icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#workoutplan{
+    padding: 20px;
+    background: coral;
+    border-radius: 60px;
+}
+
+.home-icons i{
+    font-size: 60px;
+    padding: 15px;
+}
+
+.home-icons h5{
+    font-size: 25px;
+}
+
+
+/*About*/
+.about{
+    min-height: 100vh;
+}
+
+.about h5{
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+}
+
+.about img{
+    width: 85%;
+    height: 60vh ;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about p{
+    text-align: center;
+}
+
+
+/*Memberadd*/
+.memberadd{
+    min-height: 100vh;
+}
+
+.memberadd p{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+}
+
+.mform-add{
+    width: 250px;
+    font-size: 1.4rem;
+}
+
+.mform-add input {
+    font-size: 1.4rem;
+}
+
+.common-submitbtn{
+     background: coral;
+     margin-top: 18px;
+     padding: 12px;
+     border-radius: 20px;
+     border: 3px solid coral;
+     color: antiquewhite;
+     transition: 0.3s;
+}
+
+.common-submitbtn:hover{
+     background: antiquewhite;
+     border: 3px solid coral;
+     color: coral;
+}
+
+
+/*membersview */
+.membersview{
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+.membersview_tablecontainer{
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#backbtn{
+    margin: 15px;
+}
+    
+
+
+/*plansadd */
+.plansadd{
+    min-height: 100vh;
+}
+
+.plansadd p{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+}
+
+.p-add{
+    width: 250px;
+    font-size: 1.4rem;
+}
+
+.p-add input {
+    font-size: 1.4rem;
+}
+
+
+
+/* plansview */
+.plansview{
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+.common-p{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.plansview_tablecontainer{
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 10px 10px;
+    text-align: center;
+    border: 2px solid coral;
+    
+}    
+
+th{
+    position: sticky;
+    top: 0;
+    background: coral;
+    border: 2px solid white;
+    z-index: 2;
+}
+
+.commonview-btn button{
+    font-size: 1.3rem; 
+    font-weight: 650;
+    color: antiquewhite;
+    background: coral;
+    width: 200px;
+    border: 3px solid coral;
+    border-radius: 20px; 
+    margin-bottom: 18px;
+    transition: 0.3s;
+}
+
+.commonview-btn button:hover{
+    color: coral;
+    background: antiquewhite;
+    border: 3px solid coral;
+}
+
+.commonview-delbtn{
+    color: antiquewhite;
+    background: coral;
+    border: 3px solid coral;
+    border-radius: 20px; 
+    width: auto;
+    transition: 0.3s;
+}
+
+.commonview-delbtn:hover{
+     color: coral;
+    background: antiquewhite;
+    border: 3px solid coral;
+}
+
+.commonview-updbtn{
+    color: antiquewhite;
+    background: coral;
+    border: 3px solid coral;
+    border-radius: 20px; 
+    width: auto;
+    transition: 0.3s;
+}
+
+.commonview-updbtn:hover{
+     color: coral;
+    background: antiquewhite;
+    border: 3px solid coral;
+}
+
+
+/*Members details view */
+.membersdetailsview{
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+.membersdetailsview_tablecontainer{
+    max-width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#updcrinfobtn{
+    margin: 15px;
+}
+
+/*Members details add*/
+.member_detailsadd{
+    min-height: 100vh;
+}
+
+.mdform-add{
+    width: 250px;
+    font-size: 1.4rem;
+}
+
+.mdform-add input{
+    font-size: 1.4rem;
+}
+
+
+/*Login form*/
+.login{
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+.loginform-container{
+    padding: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.loginform-container h2{
+    text-align: center;
+}
+
+.loginform{
+    padding: 25px;
+}
+
+.loginbtn{
+    font-size: 16px ;
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: rgb(238, 210, 50);
+    border: none;
+    transition: 0.3s;
+}
+
+.loginbtn:hover{
+    border: none;
+    background: goldenrod;
+}
+
+.logininput{
+    margin: 8px;
+    padding: 4px;
+    border: none;
+}
+
+.logininput input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid coral;
+    background: transparent;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+
+.loginform label{
+    color: coral;
+}
+
+#nmepsswrd{
+    color:coral;
+    text-align: center;
+}
+
+
+/*Signup form*/
+.signup{
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+.signupform-container{
+    padding: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.signupform-container h2{
+    text-align: center;
+}
+
+.signupform{
+    padding: 25px;
+}
+
+.signupbtn{
+    font-size: 16px ;
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: rgb(238, 210, 50);
+    border: none;
+    transition: 0.3s;
+}
+
+.signupbtn:hover{
+    border: none;
+    background: goldenrod;
+}
+
+.signupinput{
+    margin: 8px;
+    padding: 4px;
+    border: none;
+}
+
+.signupinput input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid coral;
+    background: transparent;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+
+.signupform label{
+    color: coral;
+}
+
+#a_login{
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+#a_login a{
+    text-decoration: none;
+}
+
+/*Footer*/
+footer{
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+#footer{
+    text-align: start;
+    margin-bottom: 4px;
+    color: coral;
+    font-weight: 550;
+}
+
+
+/*Responsive*/
+@media (max-width: 768px){
+    .menu-icon{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        position:absolute;
+        top: 50px;
+        flex-direction: column;
+        background: antiquewhite;
+        width: 50%;
+        z-index: 5000;
+    }
+
+    .nav-links a{
+        text-align: start;
+        padding: 8px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links{
+        display: flex;
+        
+    }
+
+    .home-icons{
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+
+    .about-img img{
+        width: 100%;
+        height: 400px;
+    }
+    
+    /*members view table*/
+    .membersview_tablecontainer{
+        max-height: 100%;
+    }
+
+    /*plans view table*/
+    .plansview_tablecontainer{
+        max-height: 100%;
+    }
+    
+    /*members details view table*/
+    .membersdetailsview_tablecontainer{
+        max-height: 100%;
+    }
+
+    table{
+        font-size: 15px;
+    }
+
+    .login{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .signup{
+        display: flex;
+    }
+}

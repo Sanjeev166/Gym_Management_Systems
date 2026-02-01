@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> S fitness </title>
+    <link rel="stylesheet" href="{% static 'css/A.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>    
+<body>
+    <!--Navbar-->
+    <header class="navbar">
+        <h2 class="logo"> S fitness </h2>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"> &equiv; </label>
+        <nav class="nav-links"> 
+            <a href="/home"> Home </a>
+            <a href="/about"> About </a>
+            {% if request.user.role == 1 %}
+            <a href="/members"> Add Members </a>
+            {% endif %}
+            <a href="/plans"> Plans </a>
+            <a href="/membersdetails"> Members </a>
+            <a href="/logout/"> Logout </a>
+            <a href="/signup/"> Signup </a>
+        </nav>    
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--Footer-->
+    <footer class="footer">
+        <div id="footer">
+            <p>Contact Us <br>
+               admin@gmail.com
+        </div>
+        <p> © 2025| All Rights Reserved </p>        
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,52 @@
+{%  extends "base.html" %}
+
+
+{% block content %}
+{% load static %}
+<section  class="membersview">
+    <p class="common-p"> Members </p>
+    {% if request.user.role == 1 %} 
+    <div class="commonview-btn">
+        <a href="/members/add/"> <button> Add Members </button> </a>
+    </div> 
+    {%endif%}   
+    <div class="membersview_tablecontainer">
+        <table class="membersview-table">
+            <tr>
+                <th> Name </th>
+                <th> Mobile </th>
+                <th> Address </th>
+                <th> Plan months </th>
+                <th> Total Amount </th>
+                {% if request.user.role == 1 %} 
+                <th> Delete </th>
+                {%endif%}
+                <th> Update </th>
+            </tr>    
+            {% for mem_view in membersview  %}
+            <tr>
+               <td data-label="user"> {{mem_view.user}} </td>
+               <td data-label="Mobile"> {{mem_view.Mobile}} </td>
+               <td data-label="Address"> {{mem_view.Address}} </td>
+               <td data-label="Plan"> {{mem_view.Plan}} </td>
+               <td data-label="Amount"> {{mem_view.Amount}} </td>
+               {% if request.user.role == 1 %} 
+               <td data-label="Delete" > <a href="{% url "members_del" mem_view.id %}">
+                 <button class="commonview-delbtn"> Delete </button> </a>
+               </td>
+               {%endif%}
+               <td data-label="Update" > <a href="{% url "members_upd"  mem_view.id %}">
+                 <button class="commonview-updbtn"> Update </button> </a> 
+               </td>
+            </tr> 
+            {% endfor %}
+        </table>
+    </div> 
+    {% if request.user.role == 2 %} 
+    <div class="commonview-btn" id="backbtn">
+        <a href="/membersdetails/"> <button> Back </button> </a>
+    </div> 
+    {%endif%}         
+</section>    
+
+{% endblock %}
