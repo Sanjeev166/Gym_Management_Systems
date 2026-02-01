@@ -19,3 +19,6 @@ secrets.json
 .egg
 .eggs/
 static/admin/
+static/admin/
+/static/admin
+/static/admin/
