@@ -16,3 +16,4 @@ db.sqlite3
 *.sqlite3
 secrets.json
 *.logs 
+static/admin/
