@@ -97,11 +97,11 @@ DEBUG = config.get("DEBUG", "False") == "True"
 DATABASES = {
     'default': {
        'ENGINE': 'django.db.backends.mysql',
-       'NAME': os.getenv('DB_NAME'),
-       'USER': os.getenv('DB_USER'),
-       'PASSWORD': os.getenv('DB_PASSWORD'),
-       'HOST': os.getenv('DB_HOST', 'localhost'),
-       'PORT': os.getenv('DB_PORT'),           
+       'NAME': os.getenv('MYSQLDATABASE'),
+       'USER': os.getenv('MYSQLUSER'),
+       'PASSWORD': os.getenv('MYSQLPASSWORD'),
+       'HOST': os.getenv('MYSQLHOST', 'localhost'),
+       'PORT': os.getenv('MYSQLPORT'),           
     }
 } 
 
